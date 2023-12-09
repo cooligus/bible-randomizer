@@ -6,13 +6,31 @@
         xmlns:local="clr-namespace:BibleRandomizer"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <Grid Margin="0,0,0,231">
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <TextBlock x:Name="blck_cite" TextWrapping="WrapWithOverflow" />
-        <Button Click="Button_Click" Grid.Row="1">Test</Button>
+
+        <Button Click="Button_Click" Margin="0,266,0,-230" Grid.Row="1">Generuj</Button>
+        <TextBlock x:Name="blck_cite" TextWrapping="WrapWithOverflow" Margin="18,50,10,-160" Grid.Row="1" RenderTransformOrigin="0.5,0.5" >
+
+        </TextBlock>
+        <Label Content="Księga" HorizontalAlignment="Left" Margin="85,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Width="60" />
+
+        <ComboBox HorizontalAlignment="Left" Margin="85,36,0,0" VerticalAlignment="Top" Width="120" x:Name="cmbBook" >
+
+        </ComboBox>
+        <Label Content="Rozdział" HorizontalAlignment="Left" Margin="239,12,0,0" VerticalAlignment="Top" Width="120"/>
+        <ComboBox HorizontalAlignment="Left" Margin="239,38,0,0" VerticalAlignment="Top" Width="120" x:Name="cmbChapter">
+
+        </ComboBox>
+
+        <Label Content="Werset startowy" HorizontalAlignment="Left" Margin="388,10,0,0" VerticalAlignment="Top" Width="104"/>
+
+        <Label Content="Werset końcowy" HorizontalAlignment="Left" Margin="546,12,0,0" VerticalAlignment="Top" Width="104"/>
+        <ComboBox HorizontalAlignment="Left" Margin="388,36,0,0" VerticalAlignment="Top" Width="120" x:Name="cmbStart"></ComboBox>
+        <ComboBox HorizontalAlignment="Left" Margin="546,36,0,0" VerticalAlignment="Top" Width="120" x:Name="cmbEnd"></ComboBox>
     </Grid>
 </Window>
